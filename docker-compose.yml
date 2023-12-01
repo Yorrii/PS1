@@ -13,8 +13,8 @@ services:
   mariadb:
     image: mariadb:latest
     restart: always
-    enviroment:
-      MYSQL_ROOT_PASSEWORD: secret
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
     volumes:
       - ./data:/var/lib/myslq
     ports:
