@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  flask:
+    build: .
+    container_name: flask
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./code:/code
+    depends_on:
+      - mariadb
+      
+  mariadb:
+    image: mariadb:latest
+    restart: always
+    enviroment:
+      MYSQL_ROOT_PASSEWORD: secret
+    volumes:
+      - ./data:/var/lib/myslq
+    ports:
+      - "3306:3306"

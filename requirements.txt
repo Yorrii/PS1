@@ -1,0 +1,1 @@
+Zde budou knihovny a verze potřebné pro běh aplikace
